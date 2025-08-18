@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio's Celulares - Contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/150x50.png?text=CAIO+Logo" alt="Caio's Celulares Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="#"><img src="https://via.placeholder.com/24?text=I" alt="Instagram"></a>
+                <a href="#"><img src="https://via.placeholder.com/24?text=E" alt="Email"></a>
+                <a href="#"><img src="https://via.placeholder.com/24?text=W" alt="WhatsApp"></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Buscar Produtos...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Fale Conosco</h1>
+        <p>Preencha o formulário abaixo para entrar em contato com a nossa equipe. Responderemos o mais rápido possível!</p>
+
+        <form id="contact-form" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar Mensagem</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Caio's Celulares. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/contato.js"></script>
+</body>
+</html>

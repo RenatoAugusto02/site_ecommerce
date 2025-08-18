@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: white; /* Cor de fundo padrão do site */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+/* Estilos da página de detalhes do produto */
+.product-detail {
+    padding: 40px 0;
+}
+
+.product-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.product-image-container {
+    text-align: center;
+}
+
+.product-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-details-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.product-details-container .price {
+    font-size: 2em;
+    color: #e67e22;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    margin-top: 20px;
+}
+
+.product-actions .btn-buy {
+    background-color: #27ae60;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-actions .btn-buy:hover {
+    background-color: #229a50;
+}
+
+.product-specs {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.product-specs h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-specs-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-specs-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+footer {
+    max-width:100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

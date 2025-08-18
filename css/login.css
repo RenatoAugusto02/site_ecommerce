@@ -1,0 +1,257 @@
+/* --- Estilos Globais e do Corpo da Página --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: white; /* Cor de fundo padrão do site */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+/* --- Estilos do Cabeçalho --- */
+#cabecalho {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#cabecalho #logo img {
+    height: 40px;
+}
+
+#menus ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0px;
+}
+
+#menus a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+#redes_sociais {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#sociais a img {
+    height: 24px;
+}
+
+#barra_pesquisa {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#barra_pesquisa input {
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+#barra_pesquisa button {
+    border: none;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* --- Estilos da Tela de Login --- */
+#tela_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    background-color: white; /* Fundo específico da tela de login */
+}
+
+.login-container {
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid rgba(black);
+    border-radius: 10px;
+    color: black;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#box_usuario {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+#box_usuario input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(black);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+#box_senha {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+#box_senha input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(black);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+
+#box_usuario input::placeholder {
+    color: black;
+}
+
+
+#box_senha input::placeholder {
+    color: black;
+}
+
+#box_senha i {
+    position: absolute;
+    right: 20px;
+    top: 0%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: black;
+}
+
+#senha {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+#senha label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: black;
+}
+
+#senha label p {
+    margin: 0;
+}
+
+#senha input[type="checkbox"] {
+    accent-color: black;
+}
+
+#senha a {
+    text-decoration: none;
+    color: black;
+}
+
+#senha a:hover {
+    text-decoration: underline;
+}
+
+#botao {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#botao:hover {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.5s;
+}
+
+#link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+#link a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+#link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos do Rodapé --- */
+footer {
+    max-width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+    #menus ul, #redes_sociais {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    #cabecalho, #logo {
+        margin-bottom: 15px;
+    }
+    #tela_login {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    #id_senha p a{
+        font-size: 2em;
+    }
+    footer{
+        grid-template-columns: 1fr;
+    }
+}
+
