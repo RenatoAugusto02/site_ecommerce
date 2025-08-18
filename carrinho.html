@@ -1,33 +1,62 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras - Caio's Celulares</title>
-  
+ 
+    <!-- O CSS do carrinho, ajustado para as classes do JavaScript -->
     <link rel="stylesheet" href="css/carrinho.css">
+    <!-- Adiciona a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
-        <button type="submit"><a href="index.html">Voltar</a></button>
-        </header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="https://placehold.co/120x40/007bff/FFFFFF?text=Caio%27s+Celulares" alt="Logo Caio's Celulares">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
 
-    <main class="container">
-        <h1>Seu Carrinho</h1>
+    <main class="carrinho-container">
+        <h1 class="text-center text-2xl font-bold my-8">Seu Carrinho</h1>
         
-        <section id="cart-items">
-            </section>
+        <section id="items">
+            <!-- Os itens do carrinho serão renderizados aqui pelo JavaScript -->
+        </section>
 
-        <section id="cart-summary">
-            </section>
+        <section id="total_compra" class="resumo-compra">
+            <!-- O resumo da compra será renderizado aqui pelo JavaScript -->
+        </section>
         
     </main>
 
     <footer>
         <p>&copy; 2025 Caio's Celulares. Todos os direitos reservados.</p>
-        </footer>
+    </footer>
 
+    <!-- O JavaScript que manipula o carrinho -->
     <script src="js/carrinho.js"></script>
 </body>
 </html>
