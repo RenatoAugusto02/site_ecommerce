@@ -24,6 +24,35 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    .main-header .logo-container img {
+        height: 32px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .main-nav a {
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    body {
+        font-size: 1em;
+    }
+}
+
 .main-header .logo-container img {
     height: 40px;
 }

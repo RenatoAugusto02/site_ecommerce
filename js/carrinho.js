@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                     <td class="py-3 px-6">R$ ${item.price.toFixed(2).replace('.', ',')}</td>
                     <td class="py-3 px-6 text-center">
-                        <input type="number" value="${item.quantity}" min="1" data-index="${index}" class="quantity-input w-16 text-center border rounded-md">
+                        <input type="number" value="${item.quantity}" min="1" data-index="${index}" class="input-quantidade  w-16 text-center border rounded-md">
                     </td>
                     <td class="py-3 px-6 font-semibold">R$ ${itemSubtotal.toFixed(2).replace('.', ',')}</td>
                     <td class="py-3 px-6">
-                        <button class="btn-remove text-red-500 hover:text-red-700 font-bold" data-index="${index}">Remover</button>
+                        <button class="remover text-red-500 hover:text-red-700 font-bold" data-index="${index}">Remover</button>
                     </td>
                 </tr>
             `;
@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
         cartSummaryContainer.innerHTML = `
             <p class="text-sm text-gray-700">Subtotal: R$ ${total.toFixed(2).replace('.', ',')}</p>
             <p class="font-bold text-xl mt-2 text-gray-800">Total: R$ ${total.toFixed(2).replace('.', ',')}</p>
-            <button class="w-full bg-blue-500 text-white font-semibold py-3 mt-4 rounded-lg hover:bg-blue-600">Finalizar Compra</button>
+            <button class="btn-finalizar w-full bg-blue-500 text-white font-semibold py-3 mt-4 rounded-lg hover:bg-blue-600">Finalizar Compra</button>
         `;
 
         // Adiciona event listeners para os botões de remover e inputs de quantidade
-        document.querySelectorAll('#remover').forEach(button => {
+        document.querySelectorAll('remover').forEach(button => {
             button.addEventListener('click', (e) => {
                 const index = e.target.dataset.index;
                 cartItems.splice(index, 1);
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        document.querySelectorAll('.quantity-input').forEach(input => {
+        document.querySelectorAll('.input-quantidade ').forEach(input => {
             input.addEventListener('change', (e) => {
                 const index = e.target.dataset.index;
                 const newQuantity = parseInt(e.target.value);

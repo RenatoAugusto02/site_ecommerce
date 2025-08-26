@@ -22,10 +22,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
 }
 
-#cabecalho #logo img {
+
+
+#logo img {
     height: 40px;
 }
 
@@ -77,8 +79,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
- 
-    background-color: white; /* Fundo específico da tela de login */
+
+    background-color:   white; /* Fundo específico da tela de login */
 }
 
 .login-container {
@@ -130,18 +132,18 @@ body {
     border-radius: 40px;
     outline: none;
     font-size: 16px;
-    color: black;
+    color: white;
     padding: 20px 45px 20px 20px;
 }
 
 
 #box_usuario input::placeholder {
-    color: black;
+    color: white;
 }
 
 
 #box_senha input::placeholder {
-    color: black;
+    color: white;
 }
 
 #box_senha i {
@@ -150,7 +152,7 @@ body {
     top: 0%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 #senha {
@@ -163,7 +165,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    color: black;
+    color: white;
 }
 
 #senha label p {
@@ -171,12 +173,12 @@ body {
 }
 
 #senha input[type="checkbox"] {
-    accent-color: black;
+    accent-color: white;
 }
 
 #senha a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #senha a:hover {
@@ -187,19 +189,19 @@ body {
     width: 100%;
     height: 50px;
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(white);
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: white;
     font-weight: 600;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(white);
     outline: none;
 }
 
 #botao:hover {
     background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(white);
     color: #fff;
     transition: 0.5s;
 }
@@ -212,7 +214,7 @@ body {
 
 #link a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: 600;
 }
 
@@ -230,16 +232,32 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    body {
+        font-size: 1em;
+        align-items: center center;
+
+    }
     #cabecalho {
         flex-direction: column;
-        text-align: center;
+        
+        padding: 10px 15px;
+    }
+    #logo img {
+        height: 32px;
     }
     #menus ul, #redes_sociais {
         margin-top: 15px;
         justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
     }
-    #cabecalho, #logo {
+    #menus a {
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
+    #cabecalho {
         margin-bottom: 15px;
     }
     #tela_login {
@@ -254,4 +272,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-

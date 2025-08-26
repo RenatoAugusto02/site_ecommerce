@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     flex-grow: 1;
+    text-align: none;
 }
 
 /* Estilos do Cabeçalho */
@@ -24,7 +25,36 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.main-header .logo-container img {
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    .logo-container img {
+        height: 32px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .main-nav a {
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
+    .header-right {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    body {
+        font-size: 1em;
+    }
+}
+
+.logo-container img {
     height: 40px;
 }
 
@@ -71,12 +101,21 @@ body {
     padding: 8px 12px;
     cursor: pointer;
 }
+
+#botao{
+    width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: #333;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #ccc;
 }
+
 /* --- Estilos da Página do Carrinho --- */
 
 #texto {
     padding: 40px 0;
-    text-align: center;
 }
 
 .carrinho-container {
@@ -101,6 +140,7 @@ body {
 .carrinho-tabela th {
     background-color: #f2f2f2;
     font-weight: bold;
+    
 }
 
 .info-produto {
@@ -118,11 +158,13 @@ body {
 .info-produto h4 {
     margin: 0;
     font-size: 1.1em;
+    
 }
 
 .info-produto p {
     margin: 5px 0 0;
     color: #555;
+    text-align: center;
 }
 
 .input-quantidade {
@@ -133,7 +175,8 @@ body {
     border-radius: 3px;
 }
 
-.btn-remove {
+
+.remover {
     background-color: #e74c3c;
     color: white;
     border: none;
@@ -143,7 +186,7 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-remove:hover {
+.remover:hover {
     background-color: #c0392b;
 }
 
@@ -153,7 +196,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     margin-top: 20px;
-    text-align: right;
+    text-align: center;
 }
 .resumo-compra p {
     margin: 5px 0;
@@ -167,6 +210,7 @@ body {
     border-top: 2px solid #ccc;
     padding-top: 10px;
     margin-top: 15px;
+
 }
 
 .btn-finalizar {
@@ -203,14 +247,20 @@ footer {
     .carrinho-tabela tr {
         display: block;
     }
+
+    .main-header{
+        flex-direction: column;
+        text-align: center;
+        max-height: 100%;
+    }
     .carrinho-tabela thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
+        position: center;
+        top: auto;
+        left: auto;
     }
     .carrinho-tabela tr {
         margin-bottom: 15px;
-        border: 1px solid #ddd;
+        border: 0px solid #ddd;
         border-radius: 8px;
     }
     .carrinho-tabela td {
@@ -224,7 +274,7 @@ footer {
         content: attr(data-label);
         position: absolute;
         left: 6px;
-        width: 45%;
+        width: auto;
         padding-right: 10px;
         white-space: nowrap;
         text-align: left;
@@ -237,5 +287,9 @@ footer {
     }
     .info-produto img {
         margin: 0 auto 10px;
+    }
+
+    footer{
+        min-width: 100%;
     }
 }

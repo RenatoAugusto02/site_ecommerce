@@ -1,13 +1,12 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras - Caio's Celulares</title>
- 
-    <!-- O CSS do carrinho, ajustado para as classes do JavaScript -->
+
     <link rel="stylesheet" href="css/carrinho.css">
-    <!-- Adiciona a biblioteca Font Awesome para ícones -->
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -15,15 +14,15 @@
     <header class="main-header">
         <div class="logo-container">
             <a href="index.html">
-                <img src="https://placehold.co/120x40/007bff/FFFFFF?text=Caio%27s+Celulares" alt="Logo Caio's Celulares">
+                <img src="image/logo.png" alt="Logo Caio's Celulares">
             </a>
         </div>
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
         <div class="header-right">
@@ -39,6 +38,9 @@
         </div>
     </header>
 
+     <button id="botao" type="submit"><a href="index.html"></a>Voltar</button>
+
+
     <main class="carrinho-container">
         <h1 class="text-center text-2xl font-bold my-8">Seu Carrinho</h1>
         
@@ -47,7 +49,7 @@
         </section>
 
         <section id="total_compra" class="resumo-compra">
-            <!-- O resumo da compra será renderizado aqui pelo JavaScript -->
+        
         </section>
         
     </main>
@@ -56,7 +58,6 @@
         <p>&copy; 2025 Caio's Celulares. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- O JavaScript que manipula o carrinho -->
     <script src="js/carrinho.js"></script>
 </body>
 </html>

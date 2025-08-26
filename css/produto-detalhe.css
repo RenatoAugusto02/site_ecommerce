@@ -25,6 +25,26 @@ body {
     gap: 40px;
 }
 
+@media (max-width: 768px) {
+    .product-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .product-details-container h1 {
+        font-size: 1.5em;
+    }
+    .product-details-container {
+        padding: 0 10px;
+    }
+    .product-image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        font-size: 1em;
+    }
+}
+
 .product-image-container {
     text-align: center;
 }
